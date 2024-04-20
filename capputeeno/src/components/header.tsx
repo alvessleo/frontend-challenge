@@ -45,6 +45,10 @@ const Logo = styled.a`
         line-height: 150%;
     }
 
+    @media (min-width: ${props => props.theme.tabletBreakpoint}){
+        font-size: 24px;
+    }
+
 `
 
 export function Header(props: HeaderProps){
