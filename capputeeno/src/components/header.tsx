@@ -28,7 +28,7 @@ const TagHeader = styled.header`
         gap: 24px;
     }
 
-    @media (${props => props.theme.desktopBreakpoint}){
+    @media (min-width: ${props => props.theme.desktopBreakpoint}){
         padding: 20px 160px;
     }
 
@@ -46,7 +46,7 @@ const Logo = styled.a`
     }
 
     @media (min-width: ${props => props.theme.tabletBreakpoint}){
-        font-size: 24px;
+        font-size: 32px;
     }
 
 `

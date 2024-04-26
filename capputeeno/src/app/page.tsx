@@ -1,5 +1,6 @@
 "use client";
 
+import { DefaultPageLayout } from "@/components/default-page-layout";
 import { FilterBar } from "@/components/filter-bar";
 import { ProductsList } from "@/components/products-list";
 import { QueryClient } from "@tanstack/react-query";
@@ -9,22 +10,17 @@ const PageWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px 24px;
-  min-height: 100vh;
-  background-color: var(--bg-primary);
-
-  @media (min-width: ${props => props.theme.desktopBreakpoint}){
-    padding: 34px 160px;
-  }
 `
 
 export default function Home() {
   const client = new QueryClient();
   return (
+    <DefaultPageLayout>
       <PageWrapper>
-      <FilterBar/>
-      <ProductsList/>
-      </PageWrapper>
-    
+        <FilterBar/>
+        <ProductsList/>
+      </PageWrapper>   
+    </DefaultPageLayout>
+   
   );
 }
